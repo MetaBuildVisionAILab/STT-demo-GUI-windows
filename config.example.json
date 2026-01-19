@@ -1,0 +1,6 @@
+{
+    "whisper_cli": "./whisper-cli.exe",
+    "model_path": "./models/ggml-large-v3-turbo-q5_0.bin",
+    "vad_model_path": "./models/ggml-silero-v5.1.2.bin",
+    "youtube_download_dir": "./downloaded"
+}

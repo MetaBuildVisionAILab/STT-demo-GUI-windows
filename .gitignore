@@ -1,0 +1,7 @@
+config.json
+downloaded/
+__pycache__/
+*.pyc
+.streamlit/
+models/*.bin
+*.exe
