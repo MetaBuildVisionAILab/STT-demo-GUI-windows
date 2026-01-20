@@ -87,7 +87,7 @@ def prepare_audio_file(input_path: Path) -> Path:
     ]
 
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, encoding="utf-8", errors="replace")
     except FileNotFoundError as exc:
         raise RuntimeError(
             "ffmpeg 명령을 찾을 수 없습니다. 서버 환경에 설치되어 있는지 확인하세요."
@@ -126,7 +126,7 @@ def download_youtube_audio(url: str) -> Path:
     ]
 
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, encoding="utf-8", errors="replace")
     except FileNotFoundError as exc:
         raise RuntimeError(
             "yt-dlp 명령을 찾을 수 없습니다. 서버 환경에 설치되어 있는지 확인하세요."
